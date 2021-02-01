@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="218dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Welcome to MAD!"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="287dp"
+        android:layout_height="373dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sun_image" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="176dp"
+        android:layout_height="46dp"
+        android:layout_alignBottom="@+id/output"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="556dp"
+        android:layout_toRightOf="@+id/output"
+        android:background="#CCCCCC"
+        android:hint="Enter Text"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/chTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginLeft="268dp"
+        android:layout_marginTop="552dp"
+        android:onClick="display"
+        android:text="Click Me"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/nextPage"
+        android:layout_width="53dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="68dp"
+        android:rotationX="0"
+        android:rotationY="180"
+        android:onClick="nextPage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
