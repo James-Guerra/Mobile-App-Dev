@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ordersFragLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.orders.OrdersFragment">
+
+    <LinearLayout
+        android:id="@+id/displayOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.blure.complexview.ComplexView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:radius="10dp"
+            app:shadow="true"
+            app:shadowAlpha="30"
+            app:shadowColor="#000000"
+            app:shadowPosition="bottom"
+            app:shadowSpread="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_receipt"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:text="My Order"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/orderingFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ordering from McDonalds" />
+
+                <fragment
+                    android:id="@+id/fragment"
+                    android:name="com.example.menuws.ui.orders.OrderListFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    tools:layout="@layout/fragment_orders_list" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/orderPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Order Amount:"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="GST:"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Total Price:"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.blure.complexview.ComplexView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/displayLoginFromOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/loginFromOrders"
+            android:layout_width="157dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Log in"
+            app:backgroundTint="#15BEF3" />
+
+        <TextView
+            android:id="@+id/registerFromOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myItemsFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15BEF3"
+    android:orientation="vertical"
+    tools:context=".ui.settings.MyItemsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/restaurantItemsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
+        android:text="My Items"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myItemsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/addItemForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="-40dp"
+        android:translationY="0dp"
+        android:visibility="gone"
+        app:radius="15dp"
+        app:shadow="true"
+        app:shadowAlpha="80"
+        app:shadowColor="#000000"
+        app:shadowSpread="2"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/restaurant_row_display"
+            android:orientation="vertical"
+            android:paddingBottom="60dp">
+
+            <TextView
+                android:id="@+id/itemFormTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/acme"
+                android:gravity="center_horizontal"
+                android:text="Add New Item"
+                android:textSize="36sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/foodItemNameInput"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:ems="10"
+                        android:hint="Food Item"
+                        android:inputType="textPersonName" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/foodItemPriceInput"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:ems="10"
+                        android:hint="Item Price"
+                        android:inputType="textPersonName" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/submitItemForm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:text="Submit"
+                        app:backgroundTint="#15BEF3" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </com.blure.complexview.ComplexView>
+
+</LinearLayout>

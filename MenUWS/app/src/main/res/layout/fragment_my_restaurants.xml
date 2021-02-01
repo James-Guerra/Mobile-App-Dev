@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myRestFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15BEF3"
+    android:orientation="vertical"
+    app:layout_constraintCircleRadius="200dp"
+    tools:context=".ui.settings.MyRestaurantsFragment">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center_horizontal"
+        android:text="My Restaurants"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRestaurantsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp" />
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/addRestForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:translationY="0dp"
+        android:visibility="gone"
+        app:radius="15dp"
+        app:shadow="true"
+        app:shadowAlpha="80"
+        app:shadowColor="#000000"
+        app:shadowSpread="2"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/restaurant_row_display"
+                    android:orientation="vertical"
+                    android:paddingBottom="60dp">
+
+                    <TextView
+                        android:id="@+id/restaurantFormTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/acme"
+                        android:gravity="center_horizontal"
+                        android:text="Add New Restaurant"
+                        android:textSize="36sp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/restNameInput"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:ems="10"
+                                android:hint="Restaurant Name"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/restTypeInput"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:ems="10"
+                                android:hint="Restaurant Type"
+                                android:inputType="textPersonName" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/minOrderInput"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:ems="10"
+                                android:hint="Min. Order"
+                                android:inputType="none|textPersonName" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/restAddressInput"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:ems="10"
+                                android:hint="Address"
+                                android:inputType="textPostalAddress" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/updateRestForm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:text="Update"
+                                android:visibility="gone"
+                                app:backgroundTint="#15BEF3" />
+
+                            <Button
+                                android:id="@+id/submitRestForm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corners"
+                                android:text="Submit"
+                                app:backgroundTint="#15BEF3" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </com.blure.complexview.ComplexView>
+</FrameLayout>

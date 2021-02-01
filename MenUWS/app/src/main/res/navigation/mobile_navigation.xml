@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_restaurants_btn">
+
+    <fragment
+        android:id="@+id/navigation_settings_btn"
+        android:name="com.example.menuws.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_btn_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_btn_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_btn_to_myRestaurantsFragment"
+            app:destination="@id/myRestaurantsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_restaurants_btn"
+        android:name="com.example.menuws.ui.restaurants.RestaurantsFragment"
+        android:label="fragment_restaurants_list"
+        tools:layout="@layout/fragment_restaurants_list" >
+        <action
+            android:id="@+id/action_navigation_restaurants_btn_to_ordersFragment"
+            app:destination="@id/navigation_orders_btn" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.menuws.ui.settings.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_settings_btn"
+            app:destination="@id/navigation_settings_btn" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.menuws.ui.settings.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_navigation_settings_btn"
+            app:destination="@id/navigation_settings_btn" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRestaurantsFragment"
+        android:name="com.example.menuws.ui.settings.MyRestaurantsFragment"
+        android:label="fragment_my_restaurants"
+        tools:layout="@layout/fragment_my_restaurants" >
+        <action
+            android:id="@+id/action_myRestaurantsFragment_to_myItems"
+            app:destination="@id/myItems" />
+    </fragment>
+    <fragment
+        android:id="@+id/myItems"
+        android:name="com.example.menuws.ui.settings.MyItemsFragment"
+        android:label="fragment_my_items"
+        tools:layout="@layout/fragment_my_items_list" />
+    <fragment
+        android:id="@+id/navigation_orders_btn"
+        android:name="com.example.menuws.ui.orders.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_navigation_orders_btn_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_orders_btn_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.example.menuws.ui.orders.MyOrderFragment"
+        android:label="fragment_my_order"
+        tools:layout="@layout/fragment_my_order" />
+    <fragment
+        android:id="@+id/forYouFragment"
+        android:name="com.example.menuws.ui.for_you.ForYouFragment"
+        android:label="fragment_for_you"
+        tools:layout="@layout/fragment_for_you" />
+</navigation>

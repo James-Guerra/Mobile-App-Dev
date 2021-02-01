@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_restaurants_btn"
+        android:icon="@drawable/restaurant_icon"
+        android:title="Restaurants" />
+    <item
+        android:id="@+id/navigation_for_you_btn"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="For You" />
+
+    <item
+        android:id="@+id/navigation_orders_btn"
+        android:icon="@drawable/food_icon"
+        android:title="Orders" />
+    <item
+        android:id="@+id/navigation_settings_btn"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Settings" />
+
+</menu>
